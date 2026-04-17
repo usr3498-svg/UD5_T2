@@ -10,8 +10,10 @@ public class ServicioPlato {
     }
 
     public void remove(int i) {
+    if (i >= 0 && i < platos.size()) {
         platos.remove(i);
     }
+}
 
     public void update(int i, Plato p) {
         platos.set(i, p);

@@ -48,7 +48,7 @@ public class Plato {
 
     @Override
     public String toString() {
-        return nombre + ", " + tipoPez + ", " + precio + "€, " + puntuacion + " | ";
+        return nombre + ", " + tipoPez + ", " + precio + "euros, " + puntuacion + " | ";
     }
 
 }

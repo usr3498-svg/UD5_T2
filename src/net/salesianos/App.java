@@ -47,6 +47,7 @@ public class App {
             }
 
             if (opcion.equals("3")) {
+                System.out.println(servicio.getAll());
                 System.out.println("Índice a eliminar:");
                 int i = Integer.parseInt(sc.nextLine());
                 servicio.remove(i);
