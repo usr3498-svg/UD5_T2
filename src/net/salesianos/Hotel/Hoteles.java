@@ -48,7 +48,7 @@ public class Hoteles {
 
     @Override
     public String toString() {
-        return "Nombre " + nombre + " | " + estrellas + " estrellas | " + precio + " euros | " + puntuacion + " || ";
+        return " Nombre " + nombre + " | " + estrellas + " estrellas | " + precio + " euros | " + " puntuacion " + puntuacion + " || ";
     }
 
 }
