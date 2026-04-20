@@ -1,14 +1,14 @@
-package net.salesianos.plato;
+package net.salesianos.Hotel;
 
-public class Plato {
+public class Hoteles {
     private String nombre;
-    private String tipoPez;
+    private int estrellas;
     private int precio;
     private int puntuacion;
 
-    public Plato(String nombre, String tipoPez, int precio, int puntuacion) {
+    public Hoteles(String nombre, int estrellas, int precio, int puntuacion) {
         this.nombre = nombre;
-        this.tipoPez = tipoPez;
+        this.estrellas = estrellas;
         this.precio = precio;
         this.puntuacion = puntuacion;
     }
@@ -17,9 +17,9 @@ public class Plato {
         return nombre;
     }
 
-    public String getTipoPez() {
+    public int getEstrellas() {
 
-        return tipoPez;
+        return estrellas;
     }
 
     public int getPrecio() {
@@ -34,8 +34,8 @@ public class Plato {
         this.nombre = nombre;
     }
 
-    public void setTipoPez(String tipoPez) {
-        this.tipoPez = tipoPez;
+    public void setEstrellas(int estrellas) {
+        this.estrellas = estrellas;
     }
 
     public void setPrecio(int precio) {
@@ -48,7 +48,7 @@ public class Plato {
 
     @Override
     public String toString() {
-        return nombre + ", " + tipoPez + ", " + precio + "euros, " + puntuacion + " | ";
+        return "Nombre " + nombre + " | " + estrellas + " estrellas | " + precio + " euros | " + puntuacion + " || ";
     }
 
 }

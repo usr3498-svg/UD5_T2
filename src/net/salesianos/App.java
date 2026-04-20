@@ -1,15 +1,17 @@
 package net.salesianos;
+import javax.swing.*;
 
-import net.salesianos.plato.Plato;
-import net.salesianos.plato.ServicioPlato;
-import net.salesianos.plato.ValidacionesPlato;
+import net.salesianos.Hotel.Hoteles;
+import net.salesianos.Hotel.ServicioHotel;
+import net.salesianos.Hotel.ValidacionesHoteles;
+
 import java.util.Scanner;
 
 public class App {
 
     public static void main(String[] args) {
 
-        ServicioPlato servicio = new ServicioPlato();
+        ServicioHotel servicio = new ServicioHotel();
         Scanner sc = new Scanner(System.in);
 
 
@@ -25,19 +27,19 @@ public class App {
             if (opcion.equals("1")) {
 
                 System.out.println("Nombre:");
-                String nombre = ValidacionesPlato.texto(sc.nextLine());
+                String nombre = ValidacionesHoteles.texto(sc.nextLine());
 
-                System.out.println("Tipo de pez:");
-                String tipo = ValidacionesPlato.texto(sc.nextLine());
+                System.out.println("estrellas del hotel:");
+                int estrellas = ValidacionesHoteles.numero(sc.nextLine());
 
                 System.out.println("Precio:");
-                int precio = ValidacionesPlato.numero(sc.nextLine());
+                int precio = ValidacionesHoteles.numero(sc.nextLine());
 
                 System.out.println("Puntuación:");
-                int puntuacion = ValidacionesPlato.puntuacion(sc.nextLine());
+                int puntuacion = ValidacionesHoteles.puntuacion(sc.nextLine());
 
-                if (nombre != null && tipo != null && precio != -1 && puntuacion != -1) {
-                    servicio.add(new Plato(nombre, tipo, precio, puntuacion));
+                if (nombre != null && estrellas != -1  && precio != -1 && puntuacion != -1) {
+                    servicio.add(new Hoteles(nombre, estrellas, precio, puntuacion));
                 }
 
             }

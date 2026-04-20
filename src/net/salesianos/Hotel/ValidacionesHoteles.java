@@ -1,6 +1,6 @@
-package net.salesianos.plato;
+package net.salesianos.Hotel;
 
-public class ValidacionesPlato {
+public class ValidacionesHoteles {
 
     public static String texto(String texto) {
         if (texto == null) {
@@ -26,10 +26,22 @@ public class ValidacionesPlato {
     public static int puntuacion(String num) {
         int punt = numero(num);
 
-        if (punt < 1 || punt > 5) {
+        if (punt <= 0 || punt >= 6) {
             return -1;
         }
 
         return punt;
     }
+
+    public static int estrellas(String num) {
+        int estre = numero(num);
+
+        if (estre <= 0 || estre >= 6) {
+            return -1;
+        }
+
+        return estre;
+    }
+
+
 }
