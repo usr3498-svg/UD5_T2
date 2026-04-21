@@ -11,17 +11,12 @@ public class ValidacionesHoteles {
     }
 
     public static int numero(String num) {
-
-        String[] numeros = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-
-        for (int i = 0; i < numeros.length; i++) {
-            if (numeros[i].equals(num)) {
-                return i;
-            }
-        }
-
+    try {
+        return Integer.parseInt(num);
+    } catch (Exception e) {
         return -1;
     }
+}
 
     public static int puntuacion(String num) {
         int punt = numero(num);
